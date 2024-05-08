@@ -1,0 +1,40 @@
+<table>
+  <tbody>
+    <tr>
+      <td class="0 nil" (click)="gameOn && input($event)">
+        {{ boardMat[0][0] }}
+      </td>
+      <td class="0 1" (click)="gameOn && input($event)">
+        {{ boardMat[0][1] }}
+      </td>
+      <td class="0 2" (click)="gameOn && input($event)">
+        {{ boardMat[0][2] }}
+      </td>
+    </tr>
+    <tr>
+      <td class="1 0" (click)="gameOn && input($event)">
+        {{ boardMat[1][0] }}
+      </td>
+      <td class="1 one" (click)="gameOn && input($event)">
+        {{ boardMat[1][1] }}
+      </td>
+      <td class="1 2" (click)="gameOn && input($event)">
+        {{ boardMat[1][2] }}
+      </td>
+    </tr>
+    <tr>
+      <td class="2 0" (click)="gameOn && input($event)">
+        {{ boardMat[2][0] }}
+      </td>
+      <td class="2 1" (click)="gameOn && input($event)">
+        {{ boardMat[2][1] }}
+      </td>
+      <td class="2 two" (click)="gameOn && input($event)">
+        {{ boardMat[2][2] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn" (click)="restart()" *ngIf="!gameOn">restart game</button>
+<img *ngIf="winner === 'o'" src="../../../../assets/lose.png" />
+<img *ngIf="winner === 'x'" src="../../../../assets/win.png" />
